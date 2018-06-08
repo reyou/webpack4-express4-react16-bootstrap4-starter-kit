@@ -10,8 +10,10 @@ const config = {
   entry: "./client.jsx",
   devtool: "inline-source-map",
   output: {
-    path: path.resolve(__dirname),
-    filename: "client.js"
+        path: path.resolve(__dirname, "server"),
+        filename: "client.js",
+        hotUpdateChunkFilename: './hot/hot-update.js',
+        hotUpdateMainFilename: './hot/hot-update.json'
   },
   module: {
     rules: [
