@@ -17,7 +17,7 @@ Just to run Webpack then:
 `$ npm run webpack`
 
 If you do not need server, just front-end, then you can use Webpack Dev Server:  
-`$ npm run server`
+`$ npm run wserver`
 
 You should see something like below:
 
