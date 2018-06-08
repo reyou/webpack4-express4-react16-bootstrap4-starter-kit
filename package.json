@@ -7,7 +7,7 @@
     "webpack": "webpack --watch  --progress",
     "server": "webpack-dev-server --open",
     "nodemon": "nodemon server.js",
-    "start": "concurrently \"webpack --watch  --progress\" \"nodemon server.js\"",
+    "start": "concurrently \"npm run webpack\" \"npm run nodemon\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
