@@ -1,6 +1,10 @@
 // https://github.com/reyou/Ggg.Webpack
 // https://scotch.io/tutorials/setup-a-react-environment-using-webpack-and-babel
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+
 const config = {
   mode: "development",
   entry: "./client.jsx",
@@ -22,9 +26,14 @@ const config = {
       }
     ]
   },
+  plugins: [
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: path.join(__dirname),
     compress: true,
+    hot: true,
     port: 9000
   }
 };
