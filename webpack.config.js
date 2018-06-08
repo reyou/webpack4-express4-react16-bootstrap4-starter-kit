@@ -7,6 +7,7 @@ const webpack = require('webpack');
 
 const config = {
   mode: "development",
+  target: 'web',
   entry: "./client.jsx",
   devtool: "inline-source-map",
   output: {
